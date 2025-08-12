@@ -1,0 +1,34 @@
+.cta-section {
+  background-color: #003366; /* Deep blue for trust */
+  color: #fff;
+  text-align: center;
+  padding: 3rem 2rem;
+  margin: 4rem auto;
+  max-width: 900px;
+font-family: 'Poppins', sans-serif;
+}
+
+.cta-heading {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cta-subtext {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #ff9933;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e68300;
+}

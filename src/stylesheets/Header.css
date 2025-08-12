@@ -1,0 +1,83 @@
+/* Header.css */
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0f172a;
+  /*Navy blue*/
+  color: #f1f5f9;
+  /* Light gray text */
+  padding: 10px 40px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  font-size: 17px;
+}
+
+header div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+header img {
+  border-radius: 50%;
+  border: 2px solid #f1f5f9;
+}
+
+header span {
+  font-size: 25px;
+  font-weight: 600;
+  color: #f8fafc;
+  /* near white */
+}
+
+nav {
+  display: flex;
+  gap: 35px;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 500;
+  color: white;
+  /* soft gray-blue */
+  font-family: 'Lato', sans-serif;
+
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #38bdf8;
+  /* sky blue hover */
+}
+
+.menuBtn {
+  display: none;
+}
+
+/* Responsive section */
+
+@media screen and (max-width:750px) {
+  nav {
+    display: none;
+  }
+  .menuBtn {
+    display: block;
+  }
+  
+}
+
+@media screen and (max-width:500px) {
+ .title{
+  display: none;
+ } 
+  
+}

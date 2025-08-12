@@ -1,0 +1,63 @@
+.site-footer {
+    background-color: #003366;  color: #f9f9f9;
+  padding-top: 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1.5rem;
+}
+
+.footer-brand h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-brand p {
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: #f9f9f9;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-contact p {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  padding: 0.75rem;
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: #aaa;
+}

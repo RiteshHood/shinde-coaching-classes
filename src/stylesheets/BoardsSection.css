@@ -1,0 +1,57 @@
+.Boards-Container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.Boards-Container-title {
+    font-family: 'Poppins', sans-serif;
+    color: #222;
+}
+
+.Boards {
+     display: flex;
+  justify-content: center;
+  gap: 1.3rem;
+  flex-wrap: wrap;
+  margin: 3rem;
+  
+}
+
+.boxes {
+display: flex;
+  padding: 2rem 6rem;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: white;
+  transition: transform 0.3s ease;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-family: 'Poppins', sans-serif;
+}
+.boxes:hover{
+      transform: translateY(-10px);
+
+}
+
+.Cbse {
+    background-color: #3f51b5;
+    
+}
+
+.State {
+    background-color: #00897b;
+}
+
+
+.semi {
+    background-color: #8d6e63;
+}
+
+.Marathi {
+    background-color: #fbc02d;
+    color: black;
+}
