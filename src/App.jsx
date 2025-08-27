@@ -1,7 +1,8 @@
+import React from "react";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
-import Home from "./Pages/Home.jsx";
-import About from "./Pages/About.jsx";
-import Contact from "./Pages/Contact.jsx";
+import Home from "./Pages/Home";
+import About from "./Pages/About";
+import Contact from "./Pages/Contact";
 
 function App() {
   return (
