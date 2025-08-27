@@ -6,7 +6,7 @@ import notes from "../assets/Notes.png"
 import rfid from "../assets/RFIDRefference.jpg"
 import classroom from "../assets/digitalclassroom.png"
 import Director from "./Director"
-// import Header from "./Header"
+
 
 function AboutUs() {
     return (
