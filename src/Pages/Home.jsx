@@ -2,7 +2,6 @@ import React from "react";
 import Header from "../Components/Header";
 import Hero from "../Components/Hero";
 import Boards from "../Components/Boards";
-import About from "./About";
 import CTA from "../Components/CTA"
 import Features from "../Components/Features"
 import "../stylesheets/about.css";

@@ -6,7 +6,8 @@ import "../stylesheets/Animation.css";
 
 function Header() {
     const toggleMenu=()=>{
-  const toggleBtn = document.querySelector(".menuBtn")
+  const toggleBtn = document.querySelector(".menuBtn");
+  
     }
     return (
         <>
