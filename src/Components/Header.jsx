@@ -5,9 +5,14 @@ import "../stylesheets/Header.css";
 import "../stylesheets/Animation.css";
 
 function Header() {
-    const toggleMenu=()=>{
-  const toggleBtn = document.querySelector(".menuBtn");
-  
+    const toggleMenu = () => {
+        const navbar = document.getElementById("menu");
+        if (navbar.style.display === "none") {
+            navbar.style.display = "flex";
+            navbar.classList.add("mobileNav");
+        } else {
+            navbar.style.display = "none";
+        }
     }
     return (
         <>
@@ -21,7 +26,7 @@ function Header() {
                     <Link to="/about">About</Link>
                     <Link to="/contact">Contact</Link>
                 </nav>
-                <h2 onClick={toggleMenu()} className="menuBtn">&#9776;</h2>
+                <h2 onClick={toggleMenu} className="menuBtn">&#9776;</h2>
 
             </header>
         </>
