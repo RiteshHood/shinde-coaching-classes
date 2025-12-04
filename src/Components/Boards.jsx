@@ -1,6 +1,6 @@
 import React from "react";
-import "../stylesheets/BoardsSection.css"
-import "../stylesheets/Animation.css"
+import "../stylesheets/boardsSection.css"
+import "../stylesheets/animation.css"
 
 function Boards() {
     return (

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../stylesheets/Footer.css";
+import "../stylesheets/footer.css";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();

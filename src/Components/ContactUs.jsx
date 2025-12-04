@@ -1,5 +1,5 @@
 import React from "react";
-import "../stylesheets/ContactSection.css"
+import "../stylesheets/contactSection.css"
 import call from "../assets/call.png"
 import email from "../assets/email.png"
 import location from "../assets/location.png"

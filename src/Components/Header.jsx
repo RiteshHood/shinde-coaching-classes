@@ -1,8 +1,8 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import Logo from "../assets/logo.png";
-import "../stylesheets/Header.css";
-import "../stylesheets/Animation.css";
+import "../stylesheets/header.css";
+import "../stylesheets/animation.css";
 
 function Header() {
     const toggleMenu = () => {
