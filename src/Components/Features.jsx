@@ -24,6 +24,7 @@ function Features() {
                     <div className="course-card animate-scale"> Boards: CBSE, State, Semi-English, Marathi</div>
                 </div>
             </section>
+
         </>
     )
 }

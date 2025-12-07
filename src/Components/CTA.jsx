@@ -7,7 +7,7 @@ function CTA() {
             <section className="cta-section">
                 <h2 className="cta-heading">Ready to Start Your Child's Success Journey?</h2>
                 <p className="cta-subtext">Join Shinde Coaching Classes today and experience quality education that truly makes a difference.</p>
-                <a href="/contact" className="cta-button">Contact Us</a>
+      <a href="/Register" className="cta-button">Register Now</a>
             </section>
         </>
     )
