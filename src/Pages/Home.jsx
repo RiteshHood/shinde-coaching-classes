@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../Components/Header";
 import Hero from "../Components/Hero";
 import Boards from "../Components/Boards";
 import CTA from "../Components/CTA"
@@ -9,12 +8,10 @@ import "../stylesheets/Animation.css";
 import ContactUs from "../Components/ContactUs";
 import Whatsapp from "../Components/Whatsapp";
 import AboutUs from "../Components/AboutUs";
-import Footer from "../Components/Footer";
 
 function Home() {
     return(
         <>
-        <Header/>
         <Hero/>
         <Whatsapp/>
         <Boards/>
@@ -22,7 +19,6 @@ function Home() {
         <CTA/>
         <Features/>
         <ContactUs/>
-        <Footer/>
         </>
     )
 }

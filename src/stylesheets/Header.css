@@ -27,7 +27,7 @@ header {
 header div {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 18px;
 }
 
 header img {
@@ -36,7 +36,7 @@ header img {
 }
 
 header span {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 600;
   color: #f8fafc;
   /* near white */
@@ -44,9 +44,12 @@ header span {
 
 nav {
   display: flex;
-  gap: 35px;
+  gap: 28px;
 }
-
+.nav.active {
+  display: flex;
+  flex-direction: column;
+}
 nav a {
   text-decoration: none;
   font-weight: 500;

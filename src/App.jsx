@@ -1,28 +1,30 @@
 import { Route, Routes, BrowserRouter } from "react-router-dom";
+
 import Home from "./Pages/Home.jsx";
 import About from "./Pages/About.jsx";
 import Contact from "./Pages/Contact.jsx";
 import Register from "./Pages/Register.jsx";
 
+import Header from "./components/Header.jsx";
+import Footer from "./components/Footer.jsx";
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
-        {/* Wrapper that enables routing using URLs like /, /about, /contact, etc. */}
+    <BrowserRouter>
+      
+      {/* Global Layout */}
+      <Header />
 
-        {/* Container that contains all the routes */}
-        <Routes>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
 
-          {/* Route is defined as single individual page: Home, About, Contact, etc. */}
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/register" element={<Register/>}/>
+      <Footer />
 
-        </Routes>
-      </BrowserRouter>
-    </>
+    </BrowserRouter>
   );
 }
 
