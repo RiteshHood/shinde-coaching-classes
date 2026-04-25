@@ -1,25 +1,88 @@
 import React, { useState } from "react";
-
 const Enroll = () => {
+
+  //usestate for errors.
+  const [errors, setErrors] = useState({});
+
+  //usestate for success message:
+  const [successMsg, setSuccessMsg] = useState("");
+
   const [formData, setFormData] = useState({
     studentName: "",
     parentName: "",
+    address: "",
     phone: "",
     previousClass: "",
     board: "",
   });
 
+  // Updates form state dynamically and clears success message on input change
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    setSuccessMsg(""); // clear message when user edits
   };
 
+  // validation function
+  const validate = () => {
+
+    //object to store the validation errors
+    const newErrors = {};
+
+    // name validation
+    if (!formData.studentName.trim()) {
+      newErrors.studentName = "Student name is required";
+    }
+    else if (formData.studentName.length < 3) {
+      newErrors.studentName = "Name must be at least of 3 characters";
+    }
+
+    // parent name validation
+    if (!formData.parentName.trim()) {
+      newErrors.parentName = "Parent name is required";
+    }
+
+    //address validation
+    if (!formData.address.trim()) {
+      newErrors.address = "Address is required";
+    }
+
+    // phone number validation
+
+    const pattern = /^[0-9]{10}$/
+
+    if (!formData.phone) {
+      newErrors.phone = "Phone number is required";
+    } else if (!pattern.test(formData.phone)) {
+      newErrors.phone = "Please enter the valid 10 digit phone number";
+    }
+
+    // class validation
+    if (!formData.previousClass) {
+      newErrors.previousClass = "Please select a class";
+    }
+
+    // Board validation
+    if (!formData.board) {
+      newErrors.board = "Please select the board";
+    }
+
+    return newErrors;
+  }
+
+  //handle the submit button
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!formData.studentName || !formData.phone) {
-      alert("Please fill required fields");
+    // storing the errors returned in the from the validate() function.
+    const validationErrors = validate();
+
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
       return;
     }
+
+    setErrors({});
+
 
     try {
       const response = await fetch("http://localhost:5000/admission", {
@@ -31,11 +94,17 @@ const Enroll = () => {
       });
 
       const res = await response.json();
-      alert(res.message);
+      setSuccessMsg(res.message);
+
+      // clear the success msg after 3 seconds automatically
+      setTimeout(() => {
+        setSuccessMsg("");
+      }, 3000);
 
       setFormData({
         studentName: "",
         parentName: "",
+        address: "",
         phone: "",
         previousClass: "",
         board: "",
@@ -43,13 +112,15 @@ const Enroll = () => {
 
     } catch (error) {
       console.error(error);
-      alert("Something went wrong!");
+      setSuccessMsg("Something went wrong!");
     }
   };
 
   return (
     <form onSubmit={handleSubmit}>
       <h2>Student Registration Form</h2>
+
+      {successMsg && <p className="success">{successMsg}</p>}
 
       <input
         type="text"
@@ -59,6 +130,8 @@ const Enroll = () => {
         onChange={handleChange}
         required
       />
+      {/* show the errors */}
+      {errors.studentName && <p className="error">{errors.studentName}</p>}
 
       <input
         name="parentName"
@@ -67,6 +140,7 @@ const Enroll = () => {
         onChange={handleChange}
         required
       />
+      {errors.parentName && <p className="error">{errors.parentName}</p>}
 
       <input
         name="phone"
@@ -76,6 +150,15 @@ const Enroll = () => {
         onChange={handleChange}
         required
       />
+      {errors.phone && <p className="error">{errors.phone}</p>}
+
+      <input name="address"
+        placeholder="Enter permanent address"
+        value={formData.address}
+        onChange={handleChange}
+        required
+      />
+      {errors.address && <p className="error">{errors.address}</p>}
 
       <select
         name="previousClass"
@@ -95,6 +178,7 @@ const Enroll = () => {
         <option>Class 9</option>
         <option>Class 10</option>
       </select>
+      {errors.previousClass && <p className="error">{errors.previousClass}</p>}
 
       <select
         name="board"
@@ -108,6 +192,7 @@ const Enroll = () => {
         <option>Semi-English</option>
         <option>Marathi</option>
       </select>
+      {errors.board && <p className="error">{errors.board}</p>}
 
       <button type="submit">Submit Admission</button>
     </form>

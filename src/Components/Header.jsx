@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/Logo.png";
-import "../stylesheets/header.css";
-import "../stylesheets/animation.css";
+import "../stylesheets/Header.css";
+import "../stylesheets/Animation.css";
 
 function Header() {
+  // managing responsive navbar using useState.
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -19,6 +20,7 @@ function Header() {
         <span className="title">Shinde Coaching Classes</span>
       </div>
 
+      {/* by default the nav is closed so the "nav" class will be applied when opened then isOpen will become false and "nav active will be applied" */}
       <nav className={isOpen ? "nav active" : "nav"}>
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
