@@ -94,7 +94,7 @@ const Enroll = () => {
     Board: ${formData.board}
     Address: ${formData.address}`;
 
-    const phoneNumber = "918459167593";
+    const phoneNumber = "919021467222";
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
     window.open(whatsappURL, "_blank");
