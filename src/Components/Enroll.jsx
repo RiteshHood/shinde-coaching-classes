@@ -70,10 +70,9 @@ const Enroll = () => {
   }
 
   //handle the submit button
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    // storing the errors returned in the from the validate() function.
     const validationErrors = validate();
 
     if (Object.keys(validationErrors).length > 0) {
@@ -83,37 +82,39 @@ const Enroll = () => {
 
     setErrors({});
 
+    //  Simulate success
+    setSuccessMsg("Student registered successfully!");
 
-    try {
-      const response = await fetch("http://localhost:5000/admission", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+    const message = `New Student Registration
 
-      const res = await response.json();
-      setSuccessMsg(res.message);
+    Student Name: ${formData.studentName}
+    Parent Name: ${formData.parentName}
+    Phone: ${formData.phone}
+    Class: ${formData.previousClass}
+    Board: ${formData.board}
+    Address: ${formData.address}`;
 
-      // clear the success msg after 3 seconds automatically
-      setTimeout(() => {
-        setSuccessMsg("");
-      }, 3000);
+    const phoneNumber = "918459167593";
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
-      setFormData({
-        studentName: "",
-        parentName: "",
-        address: "",
-        phone: "",
-        previousClass: "",
-        board: "",
-      });
+    window.open(whatsappURL, "_blank");
 
-    } catch (error) {
-      console.error(error);
-      setSuccessMsg("Something went wrong!");
-    }
+    // clear message after 3 sec
+    setTimeout(() => {
+      setSuccessMsg("");
+    }, 3000);
+
+    // reset form
+    setFormData({
+      studentName: "",
+      parentName: "",
+      address: "",
+      phone: "",
+      previousClass: "",
+      board: "",
+    });
+
+
   };
 
   return (
