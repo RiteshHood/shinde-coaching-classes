@@ -5,8 +5,8 @@ import About from "./Pages/About.jsx";
 import Contact from "./Pages/Contact.jsx";
 import Register from "./Pages/Register.jsx";
 
-import Header from "./components/Header.jsx";
-import Footer from "./components/Footer.jsx";
+import Header from "./Components/Header.jsx";
+import Footer from "./Components/Footer.jsx";
 
 function App() {
   return (
