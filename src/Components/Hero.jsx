@@ -1,5 +1,5 @@
 import React from "react";
-import "../stylesheets/hero.css";
+import "../stylesheets/Hero.css";
 import finalVector from "../assets/finalVector.jpg"
 
 function Hero() {
