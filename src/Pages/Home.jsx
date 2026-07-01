@@ -3,7 +3,7 @@ import Hero from "../Components/Hero";
 import Boards from "../Components/Boards";
 import CTA from "../Components/CTA"
 import Features from "../Components/Features"
-import "../stylesheets/about.css";
+import "../stylesheets/About.css";
 import "../stylesheets/Animation.css";
 import ContactUs from "../Components/ContactUs";
 import Whatsapp from "../Components/Whatsapp";
