@@ -1,6 +1,6 @@
 import React from "react";
 import directorImg from "../assets/professor.jpg"
-import "../stylesheets/director.css"
+import "../stylesheets/Director.css"
 
 function Director() {
     return (
