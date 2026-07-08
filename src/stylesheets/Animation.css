@@ -1,7 +1,7 @@
 /*header*/
 
 .animation-for-header {
-    animation: header .6s ease-in-out;
+    /* animation: header .6s ease-in-out; */
 }
 
 @keyframes header {

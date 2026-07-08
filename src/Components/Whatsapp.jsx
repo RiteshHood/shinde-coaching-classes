@@ -6,7 +6,7 @@ function Whatsapp() {
         setSuccessMsg("Registration Successful! Redirecting to WhatsApp...");
 
         setTimeout(() => {
-            window.location.href = whatsappURL;
+            window.location.href = whatsappUrl;
         }, 500);
     }
     return (

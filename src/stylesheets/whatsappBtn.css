@@ -12,7 +12,7 @@
 
  .buttonsContainer button {
      padding: 1rem;
-     width: 90%;
+     /* width: 90%; */
      overflow: hidden;
      background-color: #26a69a;
      margin-top: 2rem;
