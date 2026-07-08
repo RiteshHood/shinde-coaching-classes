@@ -3,7 +3,7 @@ import "../stylesheets/whatsappBtn.css"
 function Whatsapp() {
     const handleWhatsapp=()=>{
         let whatsappUrl = "https://wa.me/919021467222";
-        window.open(whatsappUrl , "_blank");
+        window.location.href = whatsappURL;
     }
     return (
         <>
